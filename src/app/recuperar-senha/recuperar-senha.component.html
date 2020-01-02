@@ -3,16 +3,17 @@
   <mat-card-title>Recuperar senha.</mat-card-title>
   <mat-card-subtitle>
     Digite sua nova senha abaixo.
-    Observações: A senha deve ter entre 3 a 12 digitos.
+    <b>Observações: A senha deve ter entre 3 a 12 digitos.</b>
   </mat-card-subtitle>
   <div class="example-container">
     <mat-form-field>
-      <input matInput placeholder="Nova senha: ">
+      <input type="password"matInput placeholder="Nova senha: ">
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Confirme a senha: ">
+      <input type="password"matInput placeholder="Confirme a senha: ">
     </mat-form-field>
-
+    <br><br>
+      <button color="success" mat-button>Confirmar</button>
   </div>
 </mat-card>
 

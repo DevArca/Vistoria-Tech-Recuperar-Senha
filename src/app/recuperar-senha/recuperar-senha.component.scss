@@ -11,4 +11,12 @@
 .example-card {
   max-width: 50%;
   margin: 0 auto;
+  margin-top: 5%
+}
+
+button.mat-button.mat-button-base.mat-success {
+  background-color: #15c723;
+  color: white;
+  max-width: 50%;
+  margin: 0 auto;
 }
