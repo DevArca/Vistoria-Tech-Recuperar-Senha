@@ -14,9 +14,19 @@
   margin-top: 5%
 }
 
-button.mat-button.mat-button-base.mat-success {
+.mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
   background-color: #15c723;
-  color: white;
-  max-width: 50%;
-  margin: 0 auto;
+  color: #fff;
+  line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+span.error.ng-star-inserted {
+  color: red;
 }

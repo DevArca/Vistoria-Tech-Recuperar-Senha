@@ -5,15 +5,18 @@
     Digite sua nova senha abaixo.
     <b>Observações: A senha deve ter entre 3 a 12 digitos.</b>
   </mat-card-subtitle>
+  <form [formGroup]="senha">
   <div class="example-container">
-    <mat-form-field>
-      <input type="password"matInput placeholder="Nova senha: ">
-    </mat-form-field>
-    <mat-form-field>
-      <input type="password"matInput placeholder="Confirme a senha: ">
-    </mat-form-field>
-    <br><br>
-      <button color="success" mat-button>Confirmar</button>
+      <mat-form-field>
+        <input formControlName="senha1" name="senha1" [(ngModel)]="senha.senha1" [type]="hide ? 'senha1' : 'text'" matInput placeholder="Nova senha: ">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="senha2" name="senha2" [(ngModel)]="senha.senha2" [type]="hide ? 'senha2' : 'text'" matInput placeholder="Confirme a senha: ">
+      </mat-form-field>
+      <span *ngIf="senha.senha1 != senha.senha2" class="error"> Campos devem ser iguais!!! </span>
+      <br><br>
+      <mat-chip type="submit" [disabled]="!senha.valid || (senha.senha1 != senha.senha2)" selected>Confirmar</mat-chip>
   </div>
+</form>
 </mat-card>
-
