@@ -7,6 +7,8 @@ import {Validators, FormBuilder, FormGroup} from '@angular/forms';
 })
 export class RecuperarSenhaComponent implements OnInit {
   senha: FormGroup
+  hide:boolean
+  hide1:boolean
   constructor(
     private formBuilder: FormBuilder
   ) {
@@ -14,10 +16,15 @@ export class RecuperarSenhaComponent implements OnInit {
       senha1: ['', Validators.compose([Validators.minLength(4), Validators.maxLength(10), Validators.required])],
       senha2: ['', Validators.compose([Validators.minLength(4), Validators.maxLength(10), Validators.required])]
     })
-
+    this.hide = true
+    this.hide1 = true
   }
-  hide = true;
+
   ngOnInit() {
+  }
+
+  recuperarSenha(): void{
+    console.log("Recuperar senha!")
   }
 
 }
