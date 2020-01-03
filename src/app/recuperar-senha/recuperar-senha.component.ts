@@ -25,6 +25,8 @@ export class RecuperarSenhaComponent implements OnInit {
 
   recuperarSenha(): void{
     console.log("Recuperar senha!")
+    console.log(this.senha.value.senha1)
+    console.log(this.senha.value.senha2)
   }
 
 }

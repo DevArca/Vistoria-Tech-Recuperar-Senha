@@ -10,10 +10,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {MatChipsModule} from '@angular/material/chips'
 import {MatIconModule} from '@angular/material/icon';
+import { ConfirmacaoComponent } from './confirmacao/confirmacao.component';
+import { LinkExpiradoComponent } from './link-expirado/link-expirado.component';
 @NgModule({
   declarations: [
     AppComponent,
-    RecuperarSenhaComponent
+    RecuperarSenhaComponent,
+    ConfirmacaoComponent,
+    LinkExpiradoComponent
   ],
   imports: [
     BrowserModule,
